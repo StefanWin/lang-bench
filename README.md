@@ -1,4 +1,4 @@
-# img-scaling
+# lang-bench
 A benchmark to test different programming languages because I'm bored.
 
 ## Implemented Languages:
