@@ -1,0 +1,7 @@
+typescript/node_modules/
+rust/target/
+java/main.class
+csharp/bin/
+csharp/obj/
+golang/img-scaling*
+**/img_*
