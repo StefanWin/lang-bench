@@ -6,8 +6,8 @@ A benchmark to test different programming languages because I'm bored.
 - `rust-lang v1.55.0`
 - `typescript 4.4.3`
 - `java jdk16`
-- `D DMD`
-- `D LDC`
+- `D DMD v2.097.2`
+- `D LDC v1.27.1`
 - `<your_language_here>`
 
 ### Files:
@@ -32,14 +32,14 @@ The plan is to implement various image algorithms such as:
 Run on a `AMD Ryzen 2600` at stock clocks.
 *Currently, the D implementations are not tested under the same circumstances as the other implementations.*
 
-| `lang`            | `ms`   | `cmd`                            |
-|-------------------|--------|----------------------------------|
-| `rust`            | `0ms`  | `cargo build --release && ./bin` |
-| `go`              | `0ms`  | `go build && ./bin`              |
-| `D DMD C-Style`   | `1ms`  | `dmd main.d && ./main`           |
-| `D LDC C-Style`   | `3ms`  | `ldc main.d && ./main`           |
-| `c#`              | `3ms`  | `dotnet run`                     |
-| `ts`              | `4ms`  | `ts-node`                        |
-| `java`            | `6ms`  | `javac && java`                  |
-| `D LDC C-Style`   | `17ms` | `ldc main.d && ./main`           |
-| `D DMD idiomatic` | `20ms` | `dmd main.d && ./main`           |
+| `lang`            | `ms`   | `cmd`                                                       |
+|-------------------|--------|-------------------------------------------------------------|
+| `rust`            | `0ms`  | `cargo build --release && ./bin`                            |
+| `go`              | `0ms`  | `go build && ./bin`                                         |
+| `D DMD C-Style`   | `0ms`  | `dmd -O -release -inline -boundscheck=off main.d && ./main` |
+| `D LDC C-Style`   | `0ms`  | `ldc -O -release -boundscheck=off main.d`                   |
+| `c#`              | `3ms`  | `dotnet run`                                                |
+| `ts`              | `4ms`  | `ts-node`                                                   |
+| `java`            | `6ms`  | `javac && java`                                             |
+| `D LDC idiomatic` | `10ms` | `ldc -O -release -boundscheck=off main.d && ./main`         |
+| `D DMD idiomatic` | `13ms` | `dmd -O -release -inline -boundscheck=off main.d && ./main` |
