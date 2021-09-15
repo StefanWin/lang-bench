@@ -28,6 +28,28 @@ The plan is to implement various image algorithms such as:
 - bilinear upscaling
 - etc.
 
+## Testing
+The measured time should only be the time it took apply the algorithm (includes allocation of `dst`).
+This is to avoid IO bottlenecks.
+
+## Proposed CLI
+The first argument passed to the binary should be the algorithm name specified in the next section.
+If run with no arguments or an unknown algorithm, the default should be `copy`.
+
+## Implemented Algorithms
+### `copy`
+A simple buffer copy done in steps of 3.
+### `avg_gray`
+Grayscale the image by taking the average of the RGB value.
+### `perc_gray`
+Grayscale the image by some [magic numbers](https://en.wikipedia.org/wiki/Grayscale#Colorimetric_(perceptual_luminance-preserving)_conversion_to_grayscale) I don't understand.
+
+
+| `algorithm` | `rust` | `go`   | `D DMD C` | `D LDC C` | `C#`   | `TS`   | `Java` |  `D DMD Id` | `D LDC Id` |
+| ----------- | ------ | ------ | --------- | --------- | ------ | ------ | ------ | ----------- | ---------- |
+| `copy`      |    x   |   x    |     x     |     x     |   x    |   x    |    x   |     x       |     x      |
+| `avg_gray`  |    x   |        |           |           |        |        |        |             |            |
+| `perc_gray` |    x   |        |           |           |        |        |        |             |            |
 
 ## Results:
 Run on a `AMD Ryzen 2600` at stock clocks.
