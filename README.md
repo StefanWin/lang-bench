@@ -48,10 +48,10 @@ Grayscale the image by some [magic numbers](https://en.wikipedia.org/wiki/Graysc
 | `algorithm` | `rust` | `go`   | `D DMD C` | `D LDC C` | `C#`   | `TS`   | `Java` |  `D DMD Id` | `D LDC Id` |
 | ----------- | ------ | ------ | --------- | --------- | ------ | ------ | ------ | ----------- | ---------- |
 | `copy`      |    x   |   x    |     x     |     x     |   x    |   x    |    x   |     x       |     x      |
-| `avg_gray`  |    x   |        |           |           |        |        |        |             |            |
-| `perc_gray` |    x   |        |           |           |        |        |        |             |            |
+| `avg_gray`  |    x   |   x    |           |           |        |        |        |             |            |
+| `perc_gray` |    x   |   x    |           |           |        |        |        |             |            |
 
-## Results:
+## Results (outdated):
 Run on a `AMD Ryzen 2600` at stock clocks.
 *Currently, the D and SBCL implementations are not tested under the same circumstances as the other implementations. The SBCL implementation timer is different because it also counts the time it takes to write the final image to the disk.*
 
