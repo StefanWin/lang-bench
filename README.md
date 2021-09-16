@@ -48,8 +48,8 @@ Grayscale the image by some [magic numbers](https://en.wikipedia.org/wiki/Graysc
 | `algorithm` | `rust` | `go`   | `D DMD C` | `D LDC C` | `C#`   | `TS`   | `Java` |  `D DMD Id` | `D LDC Id` |
 | ----------- | ------ | ------ | --------- | --------- | ------ | ------ | ------ | ----------- | ---------- |
 | `copy`      |    x   |   x    |     x     |     x     |   x    |   x    |    x   |     x       |     x      |
-| `avg_gray`  |    x   |   x    |           |           |        |   x    |        |             |            |
-| `perc_gray` |    x   |   x    |           |           |        |   x    |        |             |            |
+| `avg_gray`  |    x   |   x    |     x     |     x     |        |   x    |        |             |            |
+| `perc_gray` |    x   |   x    |     x     |     x     |        |   x    |        |             |            |
 
 ## Results (outdated):
 Run on a `AMD Ryzen 2600` at stock clocks.
